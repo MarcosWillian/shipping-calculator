@@ -1,0 +1,54 @@
+{
+    "name": "marcoswillian/shipping-calculator",
+    "description": "Delivery Calculator",
+    "keywords": [
+        "marcoswillian",
+        "shipping-calculator"
+    ],
+    "homepage": "https://github.com/marcoswillian/shipping-calculator",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Marcos Brito",
+            "email": "willbrs@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarcosWillian\\ShippingCalculator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcosWillian\\ShippingCalculator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarcosWillian\\ShippingCalculator\\ShippingCalculatorServiceProvider"
+            ],
+            "aliases": {
+                "ShippingCalculator": "MarcosWillian\\ShippingCalculator\\ShippingCalculatorFacade"
+            }
+        }
+    }
+}
